@@ -1,1 +1,1 @@
-Write a Shell script that runs a Python code.
+Write a Shell script that runs  Python code.
