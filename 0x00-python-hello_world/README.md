@@ -1,2 +1,2 @@
-Write a script that compiles a Python script file.
+Write the python def magic_calculations(a, b)" that does exactly the same as the following Python bytecode:
 
