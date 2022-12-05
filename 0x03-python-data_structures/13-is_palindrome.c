@@ -1,6 +1,4 @@
-#!/usr/bin/python3
-int is_palindrome(listint_t **head);
-  #include "lists.h"
+#include "lists.h"
 
 /**
  *  * reverse_listint - reverses a linked list
@@ -33,10 +31,8 @@ void reverse_listint(listint_t **head)
 int is_palindrome(listint_t **head)
 {
 	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
-
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-
 	while (1)
 	{
 		fast = fast->next->next;
@@ -44,32 +40,26 @@ int is_palindrome(listint_t **head)
 		{
 			dup = slow->next;
 			break;
-																							}
-											
-		if (!fast->next)								
-		{	
+		}
+		if (!fast->next)
+		{
 			dup = slow->next->next;
 			break;
 		}
 		slow = slow->next;
 	}
-
 	reverse_listint(&dup);
-
 	while (dup && temp)
-			
 	{
 		if (temp->n == dup->n)
-												
-        	{										
- 
-			dup = dup->next;							           temp = temp->next;	
+		{
+			dup = dup->next;
+			temp = temp->next;
 		}
-
 		else
-			return (0);
+			return(0);
 	}
-
-	if (!dup)										return (1);
+	if (!dup)
+		return (1);
 	return (0);
 }
