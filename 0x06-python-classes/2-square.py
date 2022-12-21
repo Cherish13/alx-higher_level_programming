@@ -1,20 +1,22 @@
 #!/usr/bin/python3
+# 0-square.py 
+"""A module that defines a square """
 
-def safe_print_list_integers(my_list=[], x=0):
-        """Print the first x elements of a list that are integers.
 
-            Args:
-            my_list (list): The list to print elements from.
-            x (int): The number of elements of my_list to print.
-            Returns:
-            The number of elements printed.
-            """
-            ret = 0
-            for i in range(0, x):
-                try:
-                    print("{:d}".format(my_list[i]), end="")
-                    ret += 1
-                except (ValueError, TypeError):
-                    continue
-                print("")
-                return (ret)
+class Square:
+        """A class that represents a square"""
+
+        def __init__(self, size=0):
+        """Initializing this square class
+        Args:
+        size: represnets the size of the square defined
+        Raises:
+        TypeError: if size is not integer
+        ValueError: if size is less than zero
+        """
+
+        if not isinstance(size, int):
+            raise TypeError('size must be an integer')
+        if size < 0:
+            raise ValueError('size must be >= 0')
+        self.__size = size
