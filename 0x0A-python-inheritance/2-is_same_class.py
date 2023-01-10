@@ -12,6 +12,4 @@
          If obj is exactly an instance of a_class - True.
          Otherwise - False.
          """
-         if type(obj) == a_class:
-             return True
-         return False
+         return (type(obj) == a_class)
