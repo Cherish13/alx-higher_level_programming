@@ -42,6 +42,6 @@ def print_stats(size, status_codes):
                             pass
                         print_stats(size, status_codes)
 
-                    except KeyboardInterrupt:
+             except KeyboardInterrupt:
                             print_stats(size, status_codes)
                             raise
